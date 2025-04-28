@@ -9,7 +9,7 @@ on:
 
 jobs:
   default:
-    if: github.repository == 'chrisbevan/skin.pellucid'
+    if: github.repository == 'cjmontgom/skin.pellucid.omega'
     runs-on: ubuntu-latest
 
     strategy:
@@ -55,4 +55,3 @@ jobs:
           branch: amt-sync
           delete-branch: true
           path: ./project
-          reviewers: gade01
