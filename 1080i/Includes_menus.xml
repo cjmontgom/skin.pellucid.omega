@@ -159,7 +159,7 @@
 			<thumb />
 			<property name="labelID">2--0</property>
 			<property name="defaultID">2--0</property>
-			<visible>!Library.HasContent(Music)</visible>
+			<visible>!Library.HasContent(Music) + ![Skin.HasSetting(HomeMenuNoMusicButton)]</visible>
 			<onclick>ActivateWindow(Music,Files)</onclick>
 			<property name="path">ActivateWindow(Music,Files)</property>
 			<property name="list">Files</property>

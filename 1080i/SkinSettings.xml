@@ -212,7 +212,7 @@
 					<selected>!Skin.HasSetting(HomeMenuNoTVShowButton)</selected>
 					<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
 				</control>
-                <control type="radiobutton" id="6115">
+                <control type="radiobutton" id="6125">
                     <visible>Container(8000).Hasfocus(2)</visible>
                     <label>     - Show categories widget</label>
                     <include>DefaultSettingButton</include>
