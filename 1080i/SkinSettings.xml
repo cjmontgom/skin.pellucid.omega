@@ -139,7 +139,6 @@
                     <onclick>Skin.Reset(homeBackground)</onclick>
                     <textwidth>8-col</textwidth>
                 </control>
-
                 <control type="radiobutton" id="1">
                     <visible>Container(8000).Hasfocus(1)</visible>
                     <description>Reverse power down options</description>
@@ -147,30 +146,6 @@
                     <label>31142</label>
                     <onclick>Skin.ToggleSetting(exitFirst)</onclick>
                     <selected>Skin.HasSetting(exitFirst)</selected>
-                </control>
-                <control type="radiobutton" id="7">
-                    <visible>Container(8000).Hasfocus(3)</visible>
-                    <description>Enable Debug Grid</description>
-                    <width>14-col</width>
-                    <label>31034</label>
-                    <onclick>Skin.ToggleSetting(DebugGrid)</onclick>
-                    <selected>Skin.HasSetting(DebugGrid)</selected>
-                </control>
-                <control type="radiobutton" id="8">
-                    <visible>Container(8000).Hasfocus(3)</visible>
-                    <description>Disable Debug Info</description>
-                    <width>14-col</width>
-                    <label>31035</label>
-                    <onclick>Skin.ToggleSetting(DebugInfo)</onclick>
-                    <selected>Skin.HasSetting(DebugInfo)</selected>
-                </control>
-                <control type="button" id="9">
-                    <visible>Container(8000).Hasfocus(3)</visible>
-                    <description>Reload skin</description>
-                    <width>14-col</width>
-                    <label>31043</label>
-                    <onclick>ReloadSkin()</onclick>
-                    <onclick>activateWindow(home)</onclick>
                 </control>
                 <control type="radiobutton" id="10">
                     <visible>Container(8000).Hasfocus(1)</visible>
@@ -212,6 +187,135 @@
                     <label>31240</label>
                     <onclick>Skin.ToggleSetting(disableRecentAlbums)</onclick>
                     <selected>Skin.HasSetting(disableRecentAlbums)</selected>
+                </control>
+
+				<control type="radiobutton" id="611">
+                    <visible>Container(8000).Hasfocus(2)</visible>
+					<label>"Movies"</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(HomeMenuNoMovieButton)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
+				</control>
+                <control type="radiobutton" id="6115">
+                    <visible>Container(8000).Hasfocus(2)</visible>
+                    <label>- Show categories widget</label>
+                    <include>DefaultSettingButton</include>
+                    <selected>!Skin.HasSetting(home_no_movies_categories_widget)</selected>
+                    <onclick>Skin.ToggleSetting(home_no_movies_categories_widget)</onclick>
+                    <enable>!Skin.HasSetting(HomeMenuNoMovieButton)</enable>
+                </control>
+				<control type="radiobutton" id="612">
+                    <visible>Container(8000).Hasfocus(2)</visible>
+					<label>"TV shows"</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(HomeMenuNoTVShowButton)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
+				</control>
+                <control type="radiobutton" id="6115">
+                    <visible>Container(8000).Hasfocus(2)</visible>
+                    <label>- Show categories widget</label>
+                    <include>DefaultSettingButton</include>
+                    <selected>!Skin.HasSetting(home_no_tvshows_categories_widget)</selected>
+                    <onclick>Skin.ToggleSetting(home_no_tvshows_categories_widget)</onclick>
+                    <enable>!Skin.HasSetting(HomeMenuNoTVShowButton)</enable>
+                </control>
+				<control type="radiobutton" id="613">
+                    <visible>Container(8000).Hasfocus(2)</visible>
+					<label>"Music"</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(HomeMenuNoMusicButton)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
+				</control>
+				<control type="radiobutton" id="6131">
+                    <visible>Container(8000).Hasfocus(2)</visible>
+					<label>"Music Videos"</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoMusicVideoButton)</onclick>
+				</control>
+				<control type="radiobutton" id="618">
+                    <visible>Container(8000).Hasfocus(2)</visible>
+					<label>"TV"</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(HomeMenuNoTVButton)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoTVButton)</onclick>
+				</control>
+				<control type="radiobutton" id="619">
+                    <visible>Container(8000).Hasfocus(2)</visible>
+					<label>"Radio"</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(HomeMenuNoRadioButton)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoRadioButton)</onclick>
+				</control>
+				<control type="radiobutton" id="614">
+                    <visible>Container(8000).Hasfocus(2)</visible>
+					<label>"Add-ons"</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
+				</control>
+				<control type="radiobutton" id="615">
+                    <visible>Container(8000).Hasfocus(2)</visible>
+					<label>"Pictures"</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(HomeMenuNoPicturesButton)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoPicturesButton)</onclick>
+				</control>
+				<control type="radiobutton" id="616">
+                    <visible>Container(8000).Hasfocus(2)</visible>
+					<label>"Videos"</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(HomeMenuNoVideosButton)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoVideosButton)</onclick>
+				</control>
+				<control type="radiobutton" id="620">
+                    <visible>Container(8000).Hasfocus(2)</visible>
+					<label>"Games"</label>
+					<visible>System.GetBool(gamesgeneral.enable)</visible>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(HomeMenuNoGamesButton)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoGamesButton)</onclick>
+				</control>
+				<control type="radiobutton" id="6160">
+                    <visible>Container(8000).Hasfocus(2)</visible>
+					<label>"Favourites"</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(HomeMenuNoFavButton)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoFavButton)</onclick>
+				</control>
+				<control type="radiobutton" id="617">
+                    <visible>Container(8000).Hasfocus(2)</visible>
+					<label>"Weather"</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
+				</control>
+
+
+
+                <control type="radiobutton" id="7">
+                    <visible>Container(8000).Hasfocus(3)</visible>
+                    <description>Enable Debug Grid</description>
+                    <width>14-col</width>
+                    <label>31034</label>
+                    <onclick>Skin.ToggleSetting(DebugGrid)</onclick>
+                    <selected>Skin.HasSetting(DebugGrid)</selected>
+                </control>
+                <control type="radiobutton" id="8">
+                    <visible>Container(8000).Hasfocus(3)</visible>
+                    <description>Disable Debug Info</description>
+                    <width>14-col</width>
+                    <label>31035</label>
+                    <onclick>Skin.ToggleSetting(DebugInfo)</onclick>
+                    <selected>Skin.HasSetting(DebugInfo)</selected>
+                </control>
+                <control type="button" id="9">
+                    <visible>Container(8000).Hasfocus(3)</visible>
+                    <description>Reload skin</description>
+                    <width>14-col</width>
+                    <label>31043</label>
+                    <onclick>ReloadSkin()</onclick>
+                    <onclick>activateWindow(home)</onclick>
                 </control>
             </control>
         </control>
