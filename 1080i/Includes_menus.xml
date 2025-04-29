@@ -56,7 +56,7 @@
 			<thumb />
 			<property name="labelID">31249</property>
 			<property name="defaultID">31249</property>
-			<visible>[System.HasPVRAddon] + [PVR.HasTVChannels]</visible>
+			<visible>[System.HasPVRAddon] + [PVR.HasTVChannels] + ![Skin.HasSetting(HomeMenuNoTVButton)]</visible>
 			<onclick>ActivateWindow(TVChannels)</onclick>
 			<property name="path">ActivateWindow(TVChannels)</property>
 			<property name="list">TVChannels</property>
@@ -72,7 +72,7 @@
 			<thumb />
 			<property name="labelID">31250</property>
 			<property name="defaultID">31250</property>
-			<visible>[System.HasPVRAddon] + [PVR.HasRadioChannels]</visible>
+			<visible>[System.HasPVRAddon] + [PVR.HasRadioChannels] + ![Skin.HasSetting(HomeMenuNoRadioButton)]</visible>
 			<onclick>ActivateWindow(Radiochannels)</onclick>
 			<property name="path">ActivateWindow(Radiochannels)</property>
 			<property name="list">Radiochannels</property>
@@ -88,7 +88,7 @@
 			<thumb />
 			<property name="labelID">movies</property>
 			<property name="defaultID">movies</property>
-			<visible>[Library.HasContent(Movies)] + [Library.HasContent(Movies)]</visible>
+			<visible>[Library.HasContent(Movies)] + ![Skin.HasSetting(HomeMenuNoMovieButton)]</visible>
 			<onclick condition="!Skin.HasSetting(disableRecentMovies)">ActivateWindow(Videos,videodb://movies/titles/)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://movies/titles/)</property>
 			<property name="list">videodb://movies/titles/</property>
@@ -106,7 +106,7 @@
 			<thumb />
 			<property name="labelID">tvshows</property>
 			<property name="defaultID">tvshows</property>
-			<visible>[Library.HasContent(TVShows)] + [Library.HasContent(TVshows)]</visible>
+			<visible>[Library.HasContent(TVShows)] + ![Skin.HasSetting(HomeMenuNoTVShowButton)]</visible>
 			<onclick condition="!Skin.HasSetting(disableRecentTVShows)">ActivateWindow(Videos,videodb://tvshows/titles/)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://tvshows/titles/)</property>
 			<property name="list">videodb://tvshows/titles/</property>
@@ -124,7 +124,7 @@
 			<thumb />
 			<property name="labelID">3</property>
 			<property name="defaultID">3</property>
-			<visible>!Library.HasContent(Video)</visible>
+			<visible>!Library.HasContent(Video) + ![Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 			<onclick>ActivateWindow(Videos,sources://video/)</onclick>
 			<property name="path">ActivateWindow(Videos,sources://video/)</property>
 			<property name="list">sources://video/</property>
@@ -141,7 +141,7 @@
 			<property name="labelID">2</property>
 			<property name="defaultID">2</property>
 			<property name="icon">DefaultAddon.png</property>
-			<visible>[Library.HasContent(Music)] + [Library.HasContent(Music)]</visible>
+			<visible>[Library.HasContent(Music)] + ![Skin.HasSetting(HomeMenuNoMusicButton)]</visible>
 			<onclick condition="!Skin.HasSetting(disableRecentAlbums)">ActivateWindow(Music,musicdb://albums/)</onclick>
 			<property name="path">ActivateWindow(Music,musicdb://albums/)</property>
 			<property name="list">musicdb://albums/</property>
@@ -175,7 +175,7 @@
 			<thumb />
 			<property name="labelID">31229</property>
 			<property name="defaultID">31229</property>
-			<visible>Library.HasContent(Music)</visible>
+			<visible>Library.HasContent(Music) + ![Skin.HasSetting(HomeMenuNoMusicButton)]</visible>
 			<onclick>PlayerControl(Partymode(music))</onclick>
 			<property name="path">PlayerControl(Partymode(music))</property>
 			<property name="list">PlayerControl(Partymode(music))</property>
@@ -191,6 +191,7 @@
 			<thumb />
 			<property name="labelID">31232</property>
 			<property name="defaultID">31232</property>
+			<visible>![Skin.HasSetting(HomeMenuNoGamesButton)]</visible>
 			<onclick>ActivateWindow(games)</onclick>
 			<property name="path">ActivateWindow(games)</property>
 			<property name="list">games</property>
@@ -206,7 +207,7 @@
 			<thumb />
 			<property name="labelID">weather</property>
 			<property name="defaultID">weather</property>
-			<visible>!String.IsEmpty(Weather.Plugin)</visible>
+			<visible>!String.IsEmpty(Weather.Plugin) + ![Skin.HasSetting(HomeMenuNoWeatherButton)]</visible>
 			<onclick>ActivateWindow(Weather)</onclick>
 			<property name="path">ActivateWindow(Weather)</property>
 			<property name="list">Weather</property>
@@ -222,6 +223,7 @@
 			<thumb />
 			<property name="labelID">pictures</property>
 			<property name="defaultID">pictures</property>
+			<visible>![Skin.HasSetting(HomeMenuNoPicturesButton)]</visible>
 			<onclick>ActivateWindow(Pictures)</onclick>
 			<property name="path">ActivateWindow(Pictures)</property>
 			<property name="list">Pictures</property>
