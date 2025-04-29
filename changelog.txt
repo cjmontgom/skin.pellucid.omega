@@ -1,4 +1,7 @@
 **Changelog**
+[V3.1.1]
+- [NEW] Ability to remove home screen menu items via skin configuration
+
 [V3.1.0]
 - Skin shortcuts removed
 

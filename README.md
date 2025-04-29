@@ -1,17 +1,16 @@
-Pellucid
+Pellucid Omega
 ===================
 
-Pellucid is a skin for Kodi Media Centre (V19 as at 19/03/21).
+A fork of https://github.com/chrisbevan/skin.pellucid by theDeadManInYossariansTent.
 
-Built for the living room, Pellucid is a clean and carefully designed Kodi experience designed for maximum usability and minimum fuss.
+This version is working with Kodi Omega.
+
+Pellucid is a clean and carefully designed Kodi experience designed for maximum usability and minimum fuss.
 
 #### Additional features
 
 - Full PVR / Live TV support
 
-Discussion thread: http://forum.kodi.tv/forumdisplay.php?fid=267
-
 Additional homescreen wallpapers provided by Dadebue (https://www.instagram.com/dadebue/)
 
-Created by theDeadManInYossariansTent.
 
