@@ -114,6 +114,7 @@
                 <onleft>8000</onleft>
                 <itemgap>0</itemgap>
                 <orientation>vertical</orientation>
+                <!--General-->
                 <control type="radiobutton" id="6">
                     <visible>Container(8000).Hasfocus(1)</visible>
                     <description>Stop video on return to menu</description>
@@ -188,7 +189,7 @@
                     <onclick>Skin.ToggleSetting(disableRecentAlbums)</onclick>
                     <selected>Skin.HasSetting(disableRecentAlbums)</selected>
                 </control>
-
+                <!--Menu-->
 				<control type="radiobutton" id="611">
                     <visible>Container(8000).Hasfocus(2)</visible>
 					<label>"Movies"</label>
@@ -290,9 +291,7 @@
 					<selected>!Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
 					<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
 				</control>
-
-
-
+                <!--Debugging-->
                 <control type="radiobutton" id="7">
                     <visible>Container(8000).Hasfocus(3)</visible>
                     <description>Enable Debug Grid</description>
